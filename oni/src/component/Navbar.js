@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../logo.oni.png'
-import { Link, NavLink, withRouter } from 'react-router-dom'
+import logo from '../pics/logo.oni.png'
+ import { Link, NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return(
@@ -37,4 +37,4 @@ const Navbar = () => {
     )
 }
 
-export default withRouter(Navbar)
+export default Navbar
