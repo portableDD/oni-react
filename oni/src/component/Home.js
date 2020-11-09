@@ -1,50 +1,51 @@
 import React, { Component } from 'react'
-import Data from './data'
+import { connect } from "react-redux"
+import { NavLink } from 'react-router-dom'
+import Footer from './footer'
 
 class Home extends Component {
-    state={
-        data: Data
-    }
-    
-    Format = () => {
-        let items = ""
-        let fullPath = window.location.href
-        let pos = fullPath.lastIndexOf('/') + 1
-        let category = fullPath.substr(pos)
-        category = category.substring(0, category.indexOf('.'));
-
-        if(category==='index'){
-            return this.state.data
-        }
-            
-            for ( let i = 0; i < this.state.data.length; i++) {
-                items += `<div class ="items">
-                <a href= "#?name=${this.state.data[i].name}">
-                        <div class= "featured-image">
-                            <img src= "${this.state.data[i].image}"/>
-                        </div>
-                        <div class = "info">
-                            <span>${this.state.data[i].name}</span>
-                            <span>\u20A6 ${this.state.data[i].price}</span>
-                        </div>
-                    </a>
-            </div>`
-         } 
-            return items;
-    }
     render() {
-        const post= this.Format
+        const view = this.props.data;
+        const post = view.length ? (
+            view.map(pod => {
+                return (
+                    <div className ="items" key={pod.id}>
+                        <NavLink to= "product.html?name={pod.name}">
+                            <div className= "featured-image">
+                                <img src= {pod.image} alt='pics'/>
+                            </div>
+                            <div className = "info">
+                                <span>{pod.name}</span>
+                                <span>{'\u20A6'} {pod.price}</span>
+                            </div>
+                        </NavLink>                  
+                    </div>
+                ) 
+            })
+        ) : (
+            <div className="center">Loading post...</div>
+        )
+         
         return(            
-            <div className = "index-page ">
-                <div className= "latest-title title">
-                    <h3>LATEST</h3>
-                </div>
-                <div className = "latest-product product-wrapper">
-                    { post }
-                </div>
-            </div>            
+            <main class = "hide-toggle-menu">
+                <div className = "index-page ">
+                    <div className= "latest-title title">
+                        <h3>LATEST</h3>
+                    </div>
+                    <div className = "latest-product product-wrapper">
+                        { post }
+                    </div>
+                </div> 
+                <Footer />
+            </main>           
         ) 
     }
 }
 
-export default Home
+const mapStateToProps = (state) => {
+    return{
+        data: state.data
+    }
+}
+
+export default connect(mapStateToProps)(Home)

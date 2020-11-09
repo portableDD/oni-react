@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from './footer'
 
 const Contact = () => {
     return(
@@ -13,6 +14,7 @@ const Contact = () => {
                 Donec id ipsum magna. Vivamus tincidunt ut sem ut faucibus. Ut quam felis, 
                 sollicitudin finibus sapien in, rhoncus efficitur felis. Integer at faucibus neque.
             </p>
+            <Footer />
         </div>
     ) 
 }
