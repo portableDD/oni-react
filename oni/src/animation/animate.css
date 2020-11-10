@@ -1,0 +1,38 @@
+.fade-enter{
+    opacity: 0.5;
+}
+
+.fade-enter-active{
+    animation: fade-in 500ms ease-in;
+}
+
+.fade-leave{
+    opacity: 1
+}
+
+.fade-leave-active{
+    animation: fade-out 300ms ease-in;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0.5;
+    } 
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  @keyframes fade-out {
+    0% {
+        opacity: 1;
+    } 
+    30% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+  }

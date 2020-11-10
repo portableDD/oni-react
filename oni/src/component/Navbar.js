@@ -35,7 +35,7 @@ const Navbar = () => {
                 
                 </div>
             </header>
-            <div class = "side-menu" id="side-menu">
+            <div className = "side-menu" id="side-menu">
                 <ul>
                     <li><Link to="/">Home</Link></li>
                     <li><NavLink to="/shoes">Shoes</NavLink></li>
