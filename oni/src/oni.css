@@ -232,7 +232,7 @@ header nav ul li a {
     margin-right: 15px;
     position: absolute;
     left: 50%;
-    animation: rotateImg 5s ease-in-out;
+    /* animation: rotateImg 5s ease-in-out; */
 }
 
 .slide-1 .slide-product img {
@@ -537,7 +537,7 @@ font-size: 12.0pt;
     display: block;
 }
 
-@media (max-width: 980px) {
+@media screen and (max-width: 980px) {
 
     .site-logo {
         display: block;

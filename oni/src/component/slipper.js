@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { NavLink } from 'react-router-dom'
 import Footer from './footer'
-
+import Animation from '../animation/animate'
 
 class Slippers extends Component {
     render(){
@@ -28,7 +28,8 @@ class Slippers extends Component {
             )
          
         return(            
-            <main class = "hide-toggle-menu">
+            <main className = "hide-toggle-menu">
+                <Animation />
                 <div className = "index-page ">
                     <div className= "latest-title title">
                         <h3>LATEST</h3>
