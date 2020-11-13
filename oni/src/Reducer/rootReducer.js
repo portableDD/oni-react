@@ -19,6 +19,7 @@ import Image18 from '../pics/home pics/home18.jpeg'
 import Image19 from '../pics/home pics/home19.jpeg'
 import Image20 from '../pics/home pics/home20.jpeg'
 import Image21 from '../pics/shoes pics/shoes1.jpeg'
+import Image22 from '../pics/pics sales page pics/sales1.jpeg'
 
 const initState = {
     data : [
@@ -289,6 +290,216 @@ const initState = {
             image: Image21,
             size: [20,22,25,27,30],
             desc: `This is a fine BROWN SUEDE CHELSEA BOOT made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+    ],
+     info : [
+    
+        {
+            id: 1,
+            name: 'BLACK DOUBLE MONK STRAP',
+            category: 'sales',
+            price: '13,500',
+            image: Image22, size: [20,22,25,27,30],
+            desc: `This is a fine BLACK DOUBLE MONK STRAP made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },    
+        {
+            id: 2,
+            name: 'BROWN SUEDE CHELSEA BOOT',
+            category: 'shoe',
+            price: '14,500',
+            image: Image21,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BROWN SUEDE CHELSEA BOOT made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 3,
+            name: 'BROWN BUSINESS SANDAL',
+            category: 'sandal',
+            price: '10,000',
+            image: Image20,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BROWN BUSINESS SANDAL made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 4,
+            name: 'SIMPLE LEATHER SANDAL',
+            category: 'sandal',
+            price: '7,000',
+            image: Image19,
+            size: [20,22,25,27,30],
+            desc: `This is a fine SIMPLE LEATHER SANDAL made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id : 5,
+            name: 'MEN BLACK LEATHER SLIPPERS',
+            category: 'slipper',
+            price: '6,500',
+            image: Image18,
+            size: [20,22,25,27,30],
+            desc: `This is a fine MEN BLACK LEATHER slippers made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 6,
+            name: 'LEATHER BIRKENSTOCK',
+            category: 'slipper',
+            price: '6,500',
+            image: Image17,
+            size: [20,22,25,27,30],
+            desc: `This is a fine LEATHER BIRKENSTOCK made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 7,
+            name: 'SINGLE MONK STRAP',
+            category: 'shoe',
+            price: '14,000',
+            image: Image16,
+            size: [20,22,25,27,30],
+            desc: `This is a fine SINGLE MONK STRAP made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 8,
+            name: 'BLACK HONDMADE SANDAL',
+            category: 'sandal',
+            price: '7,000',
+            image: Image15,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BLACK HONDMADE SANDAL made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 9,
+            name: 'GLADIATOR SANDAL',
+            category: 'sandal',
+            price: '6,500',
+            image: Image14,
+            size: [20,22,25,27,30],
+            desc: `This is a fine GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 10,
+            name: 'BROWN GLADIATOR SANDAL',
+            category: 'sandal',
+            price: '6,500',
+            image: Image13,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BROWN GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 11,
+            name: 'FEMALE LEATHER SLIPPERS',
+            category: 'slipper',
+            price: '8,000',
+            image: Image12,
+            size: [20,22,25,27,30],
+            desc: `This is a fine FEMALE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 12,
+            name: 'FASHIONABLE LEATHER SLIPPERS',
+            category: 'slipper',
+            price: '7,000',
+            image: Image11,
+            size: [20,22,25,27,30],
+            desc: `This is a fine FASHIONABLE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 13,
+            name: 'ENUGUIGA FEMALE SLIDES',
+            category: 'slipper',
+            price: '4,500',
+            image: Image10,
+            size: [20,22,25,27,30],
+            desc: `This is a fine ENUGUIGA FEMALE SLIDES made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 14,
+            name: 'BROWN LOAFERS',
+            category: 'shoe',
+            price: '13,500',
+            image: Image9,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BROWN LOAFERS made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id: 15,
+            name: 'BLUE LOAFERS',
+            category: 'shoe',
+            price: '13,000',
+            image: Image8,
+            size: [20,22,25,27,30],
+            desc: `This is a fine BLUE LOAFERS made out of silk, and a well built sole. <br/>
+                   we have various brand of this, in different color, size and pattern, <br/>
+                   which you will love to check out.
+                    `
+    
+        },
+        {
+            id:16,
+            name: 'ENUGUIGA UNISEX SLIDES',
+            category: 'slipper',
+            price: '4,500',
+            image: Image7,
+            size: [20,22,25,27,30],
+            desc: `This is a fine ENUGUIGA UNISEX SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
                     `
