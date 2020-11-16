@@ -9,9 +9,11 @@ class Sandal extends Component {
             const view = this.props.data;
             const post = view.length ? (
                 view.map(pod => {
+                    const stew = pod.name
+                const fry= '/product?name=' + stew
                     return (
                         <div className ="items" key={pod.id}>
-                            <NavLink to= "product.html?name={pod.name}">
+                            <NavLink to= {fry}>
                                 <div className= "featured-image">
                                     <img src= {pod.image} alt='pics'/>
                                 </div>
