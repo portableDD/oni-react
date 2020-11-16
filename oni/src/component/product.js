@@ -2,12 +2,11 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { NavLink } from 'react-router-dom'
 import Footer from './footer'
-import Animation from '../animation/animate'
+import Animation from '../animation/animi'
 
 class Product extends Component {
     render() {
-        console.log(this.props)
-        const show = this.props.info
+        const show = this.props.info;
         const showList = show.length ? (
             show.map(post =>{
                 const dry = post.name
@@ -29,14 +28,55 @@ class Product extends Component {
         ) : (
             <div className="center">Loading post...</div>
         )
+        const search = this.props.location.search;
+        const foo = new URLSearchParams(search);
+        const params = foo.get('name');
+        const life = this.props.data;
+        const lifeList = life.filter(item =>item.name === params).map(item =>{
+            const test = item.name;
+            const tested = '/payment?name=' + test;
+                    return (
+                         <div className="products-items" key={item.id}>
+                             <div className='product-single'>
+                                <div className="featured-image" >
+                                    <img src={item.image} alt='pics' />  
+                                </div>
+                             </div>
+                            
+                             <div className="content">
+                                 <div className="info">
+                                     <span>Product: {item.name}</span> 
+                                     <br/>
+                                     <span>vendor: Tetrax magnificent</span> 
+                                     <br/>
+                                     <span>price: <span id='price'>{item.price}</span></span> 
+                                     <br/>
+                                 </div>
+                                 <div className="desc">
+                                    {item.desc} 
+                                    <p>
+                                        <b>
+                                            Delivery is 5-7 days nationwide.
+                                            <br/>
+                                            The sizes that are available include:42-45
+                                        </b>
+                                     </p>
+                                 </div>
+                                 <NavLink to={tested} >
+                                     <button type="submit">purchase</button>
+                                 </NavLink>
+                             </div>
+                         </div>
+                     )
+                 
+        }) 
+  
         return (
             <div className = "hide-toggle-menu">
                 <Animation />
                 <div className = "index-page  product-page">
                     <div className="single-product-wrapper">
-                        <div className="products-items">
-
-                        </div>
+                        { lifeList }
                     </div>
 
                     <div className= "latest-title title">
@@ -55,7 +95,8 @@ class Product extends Component {
 
 const mapStateToProps = (state) => {
     return{
-        info: state.info
+        info: state.info,
+        data: state.data
     }
 }
 

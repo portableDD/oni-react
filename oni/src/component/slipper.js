@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from "react-redux"
 import { NavLink } from 'react-router-dom'
 import Footer from './footer'
-import Animation from '../animation/animate'
+import Animation from '../animation/animi'
 
 class Slippers extends Component {
     render(){

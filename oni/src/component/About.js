@@ -1,6 +1,6 @@
 import React from 'react'
 import Footer from './footer'
-import Animation from '../animation/animate'
+import Animation from '../animation/animi'
 import Pics from '../pics/about.jpg'
 
 const About = () => {

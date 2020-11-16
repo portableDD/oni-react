@@ -15,7 +15,6 @@ export default class animi extends Component {
     
     render() {
         return (
-            <div>
                 <div className="slide-show-container">
                     <Spring native to={{x: 0}}
                         config={{duration: 10000}}>
@@ -206,7 +205,7 @@ export default class animi extends Component {
                         )}
                 </Spring>
                 </div>
-            </div>
+
         )
     }
 }
