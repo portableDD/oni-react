@@ -29,7 +29,7 @@ const initState = {
             category: 'slipper',
             price: '10,000',
             image: Image1,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine VIBRAM made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -41,7 +41,7 @@ const initState = {
             category: 'slipper',
             price: '7000',
             image: Image2,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine TMI slippers made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -54,7 +54,7 @@ const initState = {
             category: 'slipper',
             price: '5000',
             image: Image3,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA slippers made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -67,7 +67,7 @@ const initState = {
             category: 'shoe',
             price: '15,000',
             image: Image4,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine CHELSEA BOOT made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -80,7 +80,7 @@ const initState = {
             category: 'slipper',
             price: '7000',
             image: Image5,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine LEATHER SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -93,7 +93,7 @@ const initState = {
             category: 'sandal',
             price: '5,500',
             image: Image6,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA FEMALE SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -106,7 +106,7 @@ const initState = {
             category: 'slipper',
             price: '4,500',
             image: Image7,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA UNISEX SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -119,7 +119,7 @@ const initState = {
             category: 'shoe',
             price: '13,000',
             image: Image8,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLUE LOAFERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -132,7 +132,7 @@ const initState = {
             category: 'shoe',
             price: '13,500',
             image: Image9,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN LOAFERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -145,7 +145,7 @@ const initState = {
             category: 'slipper',
             price: '4,500',
             image: Image10,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA FEMALE SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -158,7 +158,7 @@ const initState = {
             category: 'slipper',
             price: '7,000',
             image: Image11,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FASHIONABLE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -171,7 +171,7 @@ const initState = {
             category: 'slipper',
             price: '8,000',
             image: Image12,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FEMALE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -184,7 +184,7 @@ const initState = {
             category: 'sandal',
             price: '6,500',
             image: Image13,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -197,7 +197,7 @@ const initState = {
             category: 'sandal',
             price: '6,500',
             image: Image14,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -210,7 +210,7 @@ const initState = {
             category: 'sandal',
             price: '7,000',
             image: Image15,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLACK HONDMADE SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -223,7 +223,7 @@ const initState = {
             category: 'shoe',
             price: '14,000',
             image: Image16,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SINGLE MONK STRAP made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -236,7 +236,7 @@ const initState = {
             category: 'slipper',
             price: '6,500',
             image: Image17,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine LEATHER BIRKENSTOCK made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -249,7 +249,7 @@ const initState = {
             category: 'slipper',
             price: '6,500',
             image: Image18,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine MEN BLACK LEATHER slippers made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -262,7 +262,7 @@ const initState = {
             category: 'sandal',
             price: '7,000',
             image: Image19,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SIMPLE LEATHER SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -275,7 +275,7 @@ const initState = {
             category: 'sandal',
             price: '10,000',
             image: Image20,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN BUSINESS SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -288,7 +288,7 @@ const initState = {
             category: 'shoe',
             price: '14,500',
             image: Image21,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN SUEDE CHELSEA BOOT made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -303,7 +303,8 @@ const initState = {
             name: 'BLACK DOUBLE MONK STRAP',
             category: 'sales',
             price: '13,500',
-            image: Image22, size: [20,22,25,27,30],
+            image: Image22, 
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLACK DOUBLE MONK STRAP made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -316,7 +317,7 @@ const initState = {
             category: 'shoe',
             price: '14,500',
             image: Image21,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN SUEDE CHELSEA BOOT made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -329,7 +330,7 @@ const initState = {
             category: 'sandal',
             price: '10,000',
             image: Image20,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN BUSINESS SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -342,7 +343,7 @@ const initState = {
             category: 'sandal',
             price: '7,000',
             image: Image19,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SIMPLE LEATHER SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -355,7 +356,7 @@ const initState = {
             category: 'slipper',
             price: '6,500',
             image: Image18,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine MEN BLACK LEATHER slippers made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -368,7 +369,7 @@ const initState = {
             category: 'slipper',
             price: '6,500',
             image: Image17,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine LEATHER BIRKENSTOCK made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -381,7 +382,7 @@ const initState = {
             category: 'shoe',
             price: '14,000',
             image: Image16,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SINGLE MONK STRAP made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -394,7 +395,7 @@ const initState = {
             category: 'sandal',
             price: '7,000',
             image: Image15,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLACK HONDMADE SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -407,7 +408,7 @@ const initState = {
             category: 'sandal',
             price: '6,500',
             image: Image14,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -420,7 +421,7 @@ const initState = {
             category: 'sandal',
             price: '6,500',
             image: Image13,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN GLADIATOR SANDAL made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -433,7 +434,7 @@ const initState = {
             category: 'slipper',
             price: '8,000',
             image: Image12,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FEMALE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -446,7 +447,7 @@ const initState = {
             category: 'slipper',
             price: '7,000',
             image: Image11,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FASHIONABLE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -459,7 +460,7 @@ const initState = {
             category: 'slipper',
             price: '4,500',
             image: Image10,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA FEMALE SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -472,7 +473,7 @@ const initState = {
             category: 'shoe',
             price: '13,500',
             image: Image9,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BROWN LOAFERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -485,7 +486,7 @@ const initState = {
             category: 'shoe',
             price: '13,000',
             image: Image8,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLUE LOAFERS made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
@@ -498,7 +499,7 @@ const initState = {
             category: 'slipper',
             price: '4,500',
             image: Image7,
-            size: [20,22,25,27,30],
+            size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine ENUGUIGA UNISEX SLIDES made out of silk, and a well built sole. <br/>
                    we have various brand of this, in different color, size and pattern, <br/>
                    which you will love to check out.
