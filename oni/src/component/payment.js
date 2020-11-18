@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { NavLink, Redirect } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Animation from '../animation/animi';
 import Footer from './footer';
-import Paystack from './paystack';
+import Paystack from './paystack'
+import { PaystackButton } from 'react-paystack'
+
 
 class payment extends Component{
+    
+    getUserDetails = () => {
+        const name = document.querySelector('#name').value
+        const phone = document.querySelector('#phone').value
+        const email = document.querySelector('#email ').value
+        const house = document.querySelector('.house input').value
+        const size = document.getElementById('size').innerText
+        const amount = document.querySelector('#price').innerText
+        return {name, phone, email, house, size, amount}
+    }
     state ={
         input: {},
         errors: {},
-        redirect: null
+        key: "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf",
+        email: this.getUserDetails.email,
+        price: this.getUserDetails.amount + '00',
     }
     handleChange = (event) => {
         let input = this.state.input;
@@ -23,6 +37,7 @@ class payment extends Component{
         event.preventDefault();
       
         if(this.validate()){
+            
             console.log(this.state);
       
             let input = {};
@@ -33,10 +48,7 @@ class payment extends Component{
             this.setState({input:input});
       
             alert('Demo Form is submited');
-            if (this.state.redirect) {
-                this.setState({ redirect: "/paystack" });
-                return <Redirect to={this.state.redirect} />
-              }
+             // this.props.history.push('/paystack');
         }
       }
       validate = () => {
@@ -59,7 +71,7 @@ class payment extends Component{
             if (!pattern.test(input["phone"])) {
                 isValid = false;
                 errors["phone"] = "Please enter only number.";
-            }else if(input["phone"].length != 10){
+            }else if(input["phone"].length !== 11){
                 isValid = false;
                 errors["phone"] = "Please enter valid phone number.";
             }
@@ -92,20 +104,27 @@ class payment extends Component{
         return isValid;
     }
        
-    getUserDetails = () => {
-        const name = document.querySelector('#name').value
-        const phone = document.querySelector('#phone').value
-        const email = document.querySelector('#email ').value
-        const house = document.querySelector('.house input').value
-        const size = document.getElementById('size').innerText
-        const amount = document.querySelector('#price').innerText
-        return {name, phone, email, house, size, amount}
-    }
+    
+
     
     
     render() {
-     
-       const {name, email, phone,amount} = this.getUserDetails 
+        const {email,amount} = this.getUserDetails
+    //    const price = amount + '00'
+
+    //    const componentProps = {
+    //        email,
+    //        price,
+    //        metadata: {
+    //          name,
+    //          phone,
+    //        },
+    //        publicKey,
+    //        text: "Pay Now",
+    //        onSuccess: () =>
+    //          alert("Thanks for doing business with us! Come back soon!!"),
+    //        onClose: () => alert("Wait! Don't leave :("),
+    //      }
         const show = this.props.info;
         const showList = show.length ? (
             show.map(post =>{
@@ -203,8 +222,12 @@ class payment extends Component{
                                         <option>30</option>
                                     </select>
                                 </p>
+                                {/* <NavLink to= "/paystack">
+                                <button></button>
+                                </NavLink> */}
+                                <Paystack />
                                 
-                                    <Paystack  props={name,phone,amount,email}/>
+                               
                             </form>
                         </div>
                     </div>    

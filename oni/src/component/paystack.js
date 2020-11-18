@@ -1,35 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { PaystackButton } from 'react-paystack'
-// import PaystackWebView from 'react-native-paystack-webview'
 
- class Paystack extends Component {
-    render() {
-        const publicKey = "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf"
-        const email = this.props.email
-        const name = this.props.name
-        const phone = this.props.phone
-        const amount = this.props.amount + '00'
+  function paystack(props) {
+    const config = {
+        reference: (new Date()).getTime(),
+        email: "emmanueldorcas15@gmail.com",
+        amount: 200000,
+        publicKey: "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf",
+    }; 
 
-        const componentProps = {
-            email,
-            amount,
-            metadata: {
-              name,
-              phone,
-            },
-            publicKey,
-            text: "Pay Now",
-            onSuccess: () =>
-              alert("Thanks for doing business with us! Come back soon!!"),
-            onClose: () => alert("Wait! Don't leave :("),
-          }
-        return (
-                 
-                    <PaystackButton {...componentProps}   />
-                
-        )
-    }
-}
-
-
-export default Paystack
+    const handlePaystackSuccessAction = (reference) => {
+        alert("Transaction complete!! Thanks for doing business with us! Come back soon!!")
+        // Implementation for whatever you want to do with reference and after success call.
+        console.log(reference);
+      };
+  
+      // you can call this function anything
+      const handlePaystackCloseAction = () => {
+        alert("Wait! Transaction cancelled :(")
+        // implementation for  whatever you want to do when the Paystack dialog closed.
+        console.log('closed')
+      }
+  
+      const componentProps = {
+          ...config,
+          text: 'Pay now',
+          onSuccess: (reference) => handlePaystackSuccessAction(reference),
+          onClose: handlePaystackCloseAction,
+      };
+     return (
+         <div>
+              <PaystackButton {...componentProps} />
+         </div>
+     )
+ }
+ 
+ export default paystack
