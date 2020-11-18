@@ -1,79 +1,106 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
 import Animation from '../animation/animi';
 import Footer from './footer';
-import { PaystackButton } from 'react-paystack'
+import Paystack from './paystack';
 
 class payment extends Component{
-   
+    state ={
+        input: {},
+        errors: {},
+        redirect: null
+    }
+    handleChange = (event) => {
+        let input = this.state.input;
+        input[event.target.name] = event.target.value;
+      
+        this.setState({
+          input
+        });
+      }
+      handleSubmit = (event) => {
+        event.preventDefault();
+      
+        if(this.validate()){
+            console.log(this.state);
+      
+            let input = {};
+            input["name"] = "";
+            input["phone"]="";
+            input["email"] = "";
+            input["comment"] = "";
+            this.setState({input:input});
+      
+            alert('Demo Form is submited');
+            if (this.state.redirect) {
+                this.setState({ redirect: "/paystack" });
+                return <Redirect to={this.state.redirect} />
+              }
+        }
+      }
+      validate = () => {
+        let input = this.state.input;
+        let errors = {};
+        let isValid = true;
+    
+        if (!input["name"]) {
+          isValid = false;
+          errors["name"] = "Please enter your name.";
+        }
+        
+        if (typeof input["phone"] !== "undefined") {
+            const pattern = new RegExp(/^[0-9\b]+$/);
+            if (!pattern.test(input["phone"])) {
+                isValid = false;
+                errors["phone"] = "Please enter only number.";
+            }else if(input["phone"].length != 10){
+                isValid = false;
+                errors["phone"] = "Please enter valid phone number.";
+            }
+        }
+        
+
+        if (!input["email"]) {
+          isValid = false;
+          errors["email"] = "Please enter your email Address.";
+        }
+    
+        if (typeof input["email"] !== "undefined") {
+            
+          const pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+          if (!pattern.test(input["email"])) {
+            isValid = false;
+            errors["email"] = "Please enter valid email address.";
+          }
+        }
+    
+        if (!input["comment"]) {
+          isValid = false;
+          errors["comment"] = "Please enter your comment.";
+        }
+    
+        this.setState({
+          errors: errors
+        });
+    
+        return isValid;
+    }
+       
     getUserDetails = () => {
-        const name = document.querySelector('.name input').value
-        const phone = document.querySelector('.phone input').value
-        const email = document.querySelector('.email input').value
+        const name = document.querySelector('#name').value
+        const phone = document.querySelector('#phone').value
+        const email = document.querySelector('#email ').value
         const house = document.querySelector('.house input').value
         const size = document.getElementById('size').innerText
-        const amount = document.getElementById('price').innerText
+        const amount = document.querySelector('#price').innerText
         return {name, phone, email, house, size, amount}
     }
-    submitForm = () => {
-        this.validateFields()
-        const errorMessages = [];
-        if (!errorMessages.length) {
-            const { email, phone, amount,name } = this.getUserDetails
     
-            this.payWithPaystack(email,amount,phone,name)
-        }
-    }
-    validateFields = () => {
-        const {name, phone} = this.getUserDetails
-        const errorMessages = [];
-        if (name.length < 3){
-            errorMessages.push('Incomplete name entererd')
-        }
-        if (isNaN(phone)){
-            errorMessages.push('Invalid phone number entered')
-        }
-    
-        if(errorMessages.length) {
-            let el = ''
-            errorMessages.forEach(err => {
-                el += `<p>${err}</p>`
-            })
-            return document.getElementById('error').innerHTML = el
-        }
-    }
-    
-    clearError = ()  => {
-        let elements = document.getElementById('field')
-        const errorMessages = [];
-        elements.forEach(el => {
-            if(errorMessages.length){
-                errorMessages = []
-                document.getElementById('error').innerHTML = ''
-            }
-        })
-    }
-    payWithPaystack = (name,email,amount,phone,) => {
-        const publicKey = "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf"
-        const price = amount+'00'
-        
-        const componentProps = {
-            email,
-            price,
-            metadata: {
-              name,
-              phone,
-            },
-            publicKey,
-            text: "Pay Now",
-            onSuccess: () =>
-              alert("Thanks for doing business with us! Come back soon!!"),
-            onClose: () => alert("Wait! You need this oil, don't go!!!!"),
-          }
-    }
     
     render() {
+     
+       const {name, email, phone,amount} = this.getUserDetails 
         const show = this.props.info;
         const showList = show.length ? (
             show.map(post =>{
@@ -100,26 +127,17 @@ class payment extends Component{
         const foo = new URLSearchParams(search);
         const params = foo.get('name');
         const life = this.props.data;
-        let itemSize
-        
         const lifeList = life.filter(items =>items.name === params).map(item =>{
-            
-                item.size.filter(team => team.name === params).map(pure =>{
-                    return ( itemSize +=
-                            (<option key={pure.id}>{pure.size}</option>)             
-                    )
-                }) 
-            
             return (
-                <div class="products-items" key={item.id}>
-                        <div class="product-single">
-                            <div class="featured-image">
+                <div className="products-items" key={item.id}>
+                        <div className="product-single">
+                            <div className="featured-image">
                                 <img src={item.image} alt='the pics'/>
                             </div>
                         </div>
     
-                        <div class="content">
-                            <div class="info">
+                        <div className="content">
+                            <div className="info">
                                 <span>Product: {item.name}</span> 
                                 <br/>
                                 <span>vendor: Tetrax magnificent</span> 
@@ -127,29 +145,62 @@ class payment extends Component{
                                 <span>price: <span id='price'>{item.price}</span></span> 
                                 <br/>
                             </div>
-                            <p></p>
-                            <div class="pay-bitch">
-                                <div id="error"></div>
-                                <p class="name">
-                                    <input type="text" id='field' onInput={this.clearError} placeholder="Full Name" />
+                            <form className="pay-bitch" onSubmit={this.handleSubmit} >
+                                <p className="name">
+                                    <input 
+                                    type="text" 
+                                    name ="name" 
+                                    value={this.state.input.name} 
+                                    onChange={this.handleChange} 
+                                    className='shape'  
+                                    placeholder="Enter full Name" 
+                                    id="name"/>
                                 </p>
-                                <p class="phone">
-                                    <input type="text" id='field' onInput={this.clearError} placeholder="Phone Number" />
+                                <p>{this.state.errors.name}</p>
+                                <p className="phone">
+                                    <input 
+                                    type="text" 
+                                    name="phone" 
+                                    value={this.state.input.phone} 
+                                    onChange={this.handleChange} 
+                                    className='shape'  
+                                    placeholder="Enter Phone Number" 
+                                    id="phone"/>
                                 </p>
-                                <p class="email">
-                                    <input type="email" onInput={this.clearError}  placeholder="Email Address" />
+                                <p>{this.state.errors.phone}</p>
+                                <p className="email">
+                                    <input 
+                                    type="text"  
+                                    name="email" 
+                                    value={this.state.input.email} 
+                                    onChange={this.handleChange} 
+                                    className='shape'  
+                                    placeholder="Enter Email Address" 
+                                    id="email"/>
                                 </p>
-                                <p class="house">
-                                    <input type="text" id='field' onInput={this.clearError}  placeholder="Residential Address" />
+                                <p>{this.state.errors.email}</p>
+                                <p className="house">
+                                <textarea 
+                                    name="comment"
+                                    value={this.state.input.comment} 
+                                    onChange={this.handleChange}
+                                    placeholder="Enter Residential Address"
+                                    className='shape'/>
                                 </p>
-                                <p class="size">
+                                <p>{this.state.errors.comment}</p>
+                                <p className="size">
                                     <select id="size" name="size" >
                                         <option>Select shoe size</option>
-                                            {itemSize}
+                                        <option>20</option>
+                                        <option>22</option>
+                                        <option>25</option>
+                                        <option>27</option>
+                                        <option>30</option>
                                     </select>
                                 </p>
-                                <PaystackButton  {...this.submitForm}/>
-                            </div>
+                                
+                                    <Paystack  props={name,phone,amount,email}/>
+                            </form>
                         </div>
                     </div>    
             )
