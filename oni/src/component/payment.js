@@ -49,6 +49,11 @@ class payment extends Component{
           errors["name"] = "Please enter your name.";
         }
         
+        if (!input["phone"]) {
+            isValid = false;
+            errors["phone"] = "Please enter your phone number.";
+        }
+
         if (typeof input["phone"] !== "undefined") {
             const pattern = new RegExp(/^[0-9\b]+$/);
             if (!pattern.test(input["phone"])) {
