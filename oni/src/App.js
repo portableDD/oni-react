@@ -9,7 +9,7 @@ import About from './component/About'
 import Contact from './component/Contact'
 import Product from './component/product'
 import Payment from './component/payment'
-import Paystack from './component/paystack'
+// import Paystack from './component/paystack'
 
 class App extends Component {
   render() {
@@ -25,7 +25,7 @@ class App extends Component {
           <Route path='/contact' component={Contact} />
           <Route path='/product' component={Product} />
           <Route path='/payment' component={Payment} />
-          <Route path='/paystack' component={Paystack} />
+          {/* <Route path='/paystack' component={Paystack} /> */}
         </div>
       </BrowserRouter>
       

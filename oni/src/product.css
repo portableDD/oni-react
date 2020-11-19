@@ -2,6 +2,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+.product-page .content {
+    flex: 1;
+}
 .product-page .featured-image {
 	height: 150px;
 }
@@ -29,6 +32,7 @@
 	flex: 1;
 	font-size: 14px;
 	color: #5d5b5b;
+	margin-top: 10px
 }
 .desc{
 	word-spacing: 1px;

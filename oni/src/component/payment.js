@@ -3,27 +3,14 @@ import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import Animation from '../animation/animi';
 import Footer from './footer';
-import Paystack from './paystack'
 import { PaystackButton } from 'react-paystack'
 
 
 class payment extends Component{
-    
-    getUserDetails = () => {
-        const name = document.querySelector('#name').value
-        const phone = document.querySelector('#phone').value
-        const email = document.querySelector('#email ').value
-        const house = document.querySelector('.house input').value
-        const size = document.getElementById('size').innerText
-        const amount = document.querySelector('#price').innerText
-        return {name, phone, email, house, size, amount}
-    }
     state ={
         input: {},
         errors: {},
-        key: "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf",
-        email: this.getUserDetails.email,
-        price: this.getUserDetails.amount + '00',
+        
     }
     handleChange = (event) => {
         let input = this.state.input;
@@ -48,7 +35,7 @@ class payment extends Component{
             this.setState({input:input});
       
             alert('Demo Form is submited');
-             // this.props.history.push('/paystack');
+            
         }
       }
       validate = () => {
@@ -94,7 +81,7 @@ class payment extends Component{
     
         if (!input["comment"]) {
           isValid = false;
-          errors["comment"] = "Please enter your comment.";
+          errors["comment"] = "Please enter your address.";
         }
     
         this.setState({
@@ -109,22 +96,35 @@ class payment extends Component{
     
     
     render() {
-        const {email,amount} = this.getUserDetails
-    //    const price = amount + '00'
-
-    //    const componentProps = {
-    //        email,
-    //        price,
-    //        metadata: {
-    //          name,
-    //          phone,
-    //        },
-    //        publicKey,
-    //        text: "Pay Now",
-    //        onSuccess: () =>
-    //          alert("Thanks for doing business with us! Come back soon!!"),
-    //        onClose: () => alert("Wait! Don't leave :("),
-    //      }
+        const sea = this.props.location.search;
+        const foot = new URLSearchParams(sea);
+        const param = foot.get('name');
+        const face = this.props.data;
+        const priceTag = face.filter(items =>items.name === param).map(item => { 
+            return item.price
+        })
+       const price = priceTag.toString().replace(',','') 
+        console.log(price)
+        const config = {
+            reference: (new Date()).getTime(),
+            email: this.state.input.email,
+            amount: price + '00',
+            publicKey: "pk_test_82ce23694563611af6015b7bdfc1dd4a1f044acf",
+        }; 
+        const handlePaystackSuccessAction = (reference) => {
+            alert("Transaction complete!! Thanks for doing business with us! Come back soon!!")        
+          };
+          const handlePaystackCloseAction = () => {
+            alert("whoops! Transaction cancelled ")   
+          }
+      
+          const componentProps = {
+              ...config,
+              text: 'Pay now',
+              onSuccess: (reference) => handlePaystackSuccessAction(reference),
+              onClose: handlePaystackCloseAction,
+          };
+    
         const show = this.props.info;
         const showList = show.length ? (
             show.map(post =>{
@@ -222,12 +222,7 @@ class payment extends Component{
                                         <option>30</option>
                                     </select>
                                 </p>
-                                {/* <NavLink to= "/paystack">
-                                <button></button>
-                                </NavLink> */}
-                                <Paystack />
-                                
-                               
+                               <PaystackButton {...componentProps} />
                             </form>
                         </div>
                     </div>    

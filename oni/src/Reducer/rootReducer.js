@@ -156,7 +156,7 @@ const initState = {
             id: 11,
             name: 'FASHIONABLE LEATHER SLIPPERS',
             category: 'slipper',
-            price: '7,000',
+            price: '7000',
             image: Image11,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FASHIONABLE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
@@ -169,7 +169,7 @@ const initState = {
             id: 12,
             name: 'FEMALE LEATHER SLIPPERS',
             category: 'slipper',
-            price: '8,000',
+            price: '8000',
             image: Image12,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FEMALE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
@@ -208,7 +208,7 @@ const initState = {
             id: 15,
             name: 'BLACK HONDMADE SANDAL',
             category: 'sandal',
-            price: '7,000',
+            price: '7000',
             image: Image15,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLACK HONDMADE SANDAL made out of silk, and a well built sole. <br/>
@@ -260,7 +260,7 @@ const initState = {
             id:19,
             name: 'SIMPLE LEATHER SANDAL',
             category: 'sandal',
-            price: '7,000',
+            price: '7000',
             image: Image19,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SIMPLE LEATHER SANDAL made out of silk, and a well built sole. <br/>
@@ -341,7 +341,7 @@ const initState = {
             id: 4,
             name: 'SIMPLE LEATHER SANDAL',
             category: 'sandal',
-            price: '7,000',
+            price: '7000',
             image: Image19,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine SIMPLE LEATHER SANDAL made out of silk, and a well built sole. <br/>
@@ -393,7 +393,7 @@ const initState = {
             id: 8,
             name: 'BLACK HONDMADE SANDAL',
             category: 'sandal',
-            price: '7,000',
+            price: '7000',
             image: Image15,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine BLACK HONDMADE SANDAL made out of silk, and a well built sole. <br/>
@@ -432,7 +432,7 @@ const initState = {
             id: 11,
             name: 'FEMALE LEATHER SLIPPERS',
             category: 'slipper',
-            price: '8,000',
+            price: '8000',
             image: Image12,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FEMALE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>
@@ -445,7 +445,7 @@ const initState = {
             id: 12,
             name: 'FASHIONABLE LEATHER SLIPPERS',
             category: 'slipper',
-            price: '7,000',
+            price: '7000',
             image: Image11,
             size: [{id: 1, num:20},{id: 2,num:22},{id:3, num:25},{id:4, num:27},{id:4, num:30}],
             desc: `This is a fine FASHIONABLE LEATHER SLIPPERS made out of silk, and a well built sole. <br/>

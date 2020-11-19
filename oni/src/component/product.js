@@ -85,6 +85,7 @@ class Product extends Component {
                     <div className= "latest-product product-wrapper">
                         { showList }
                     </div>
+                   
                 </div>
                 <Footer />
             </div>
