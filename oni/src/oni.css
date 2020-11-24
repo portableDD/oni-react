@@ -18,15 +18,12 @@ body {
 }
 
 header {
-    
-    max-width: 1000px; 
+    max-width: 800px; 
     margin: 0px auto;
     padding: unset;
     width: unset;
     height: unset;
 } 
-
-
 
 .site-header {
     display: flex;
